@@ -1,0 +1,3 @@
+#!/bin/bash
+
+grep stack_master Gemfile.lock | grep '(' | awk '{print $2}' | perl -pe 's,\(|\),,g'
