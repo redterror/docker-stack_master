@@ -10,4 +10,6 @@ RUN apk --update add --no-cache --virtual build-dependencies build-base \
   && bundle install \
   && apk --purge del build-dependencies build-base
 
+WORKDIR /stack_master
+
 ENTRYPOINT ["stack_master"]
